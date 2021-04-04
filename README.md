@@ -24,8 +24,12 @@ Implementar a aplicação desde de o núcleo back-end até a interfaces de inter
     ...
     Update-database
  
- 
 
 > para mais informações de migrations com Entity Framework:
 > https://www.entityframeworktutorial.net/efcore/entity-framework-core-migration.aspx
 
+#### caso esteja no VScode:
+    
+    dotnet ef migrations add NomeDaMigration
+    ...
+    dotnet ef database update
