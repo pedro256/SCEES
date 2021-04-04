@@ -39,4 +39,4 @@ msbuild.wrn
 
 [Mm]igrations/
 
-menu.txt
+*.txt
