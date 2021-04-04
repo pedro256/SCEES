@@ -13,7 +13,6 @@ namespace SCEES.Domain.Models
         public Guid id { get; set; }
         [Required]
         public string name { get; set; }
-        [Required,MinLength(1)]
         public long qtd { get; set; }
 
         [ForeignKey("CategoryId")]

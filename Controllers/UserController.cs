@@ -29,20 +29,14 @@ namespace SCEES.Controllers
         public async Task<ActionResult> GetById(Guid id)
         {
             var user = await userService.findByIdAsync(id);
-            if (user == null)
-            {
-                return BadRequest(new ErrorResponse { Error = null, Status = false });
-            }
+            if (user == null) return NotFound(new ErrorResponse { Error = null, Status = false });
             return Ok(user);
         }
         [HttpPut]
         public async Task<ActionResult> update(Usuario usuario)
         {
             var result = await userService.updateAsync(usuario);
-            if (result == null)
-            {
-                return NotFound(new ErrorResponse { Error = null, Status = false });
-            }
+            if (result == null) return NotFound(new ErrorResponse { Error = null, Status = false });
             return NoContent();
         }
         [HttpPost]
