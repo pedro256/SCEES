@@ -46,6 +46,7 @@ namespace SCEES.Services
 
         public async Task<Category> updateAsync(Category category)
         {
+            category.updatedAt = DateTime.UtcNow;
             return await categoryRepository.updateAsync(category);
         }
     }

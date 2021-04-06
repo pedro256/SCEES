@@ -57,6 +57,11 @@ namespace SCEES.Services
             return await productRepository.FindAsync(price);
         }
 
+        public async Task<IEnumerable<Product>> findByPriceSale(decimal price)
+        {
+            return await productRepository.FindByPriceSale(price);
+        }
+
         public async Task<IEnumerable<Product>> findByQtd(int qtd)
         {
             return await productRepository.FindAsync(qtd);
@@ -64,6 +69,7 @@ namespace SCEES.Services
 
         public async Task<Product> updateAsync(Product product)
         {
+            product.updatedAt = DateTime.UtcNow;
             return await productRepository.updateAsync(product);
         }
         

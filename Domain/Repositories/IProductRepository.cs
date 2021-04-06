@@ -13,6 +13,7 @@ namespace SCEES.Domain.Repositories
         public Task<IEnumerable<Product>> FindAsync(string nome);
         public Task<IEnumerable<Product>> FindAsync(int qtd);
         public Task<IEnumerable<Product>> FindAsync(decimal price);
+        public Task<IEnumerable<Product>> FindByPriceSale(decimal price);
         public Task<IEnumerable<Product>> FindByCategoryIdAsync(Guid id);
         public Task<IEnumerable<Product>> FindByValidDateAsync(DateTime dateTime);
         public Task<Product> createAsync(Product product);

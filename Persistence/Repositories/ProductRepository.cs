@@ -61,6 +61,11 @@ namespace SCEES.Persistence.Repositories
             return await context.Products.Where(prod => prod.categoryId == id).ToListAsync();
         }
 
+        public async Task<IEnumerable<Product>> FindByPriceSale(decimal price)
+        {
+            return await context.Products.Where(prod => prod.salePrice == price).ToListAsync();
+        }
+
         public async Task<IEnumerable<Product>> FindByValidDateAsync(DateTime dateTime)
         {
             return await context.Products

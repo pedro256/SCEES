@@ -17,5 +17,7 @@ namespace SCEES.Domain.Services
         public Task<IEnumerable<Sale>> findByNameClient(string name);
         public Task<IEnumerable<Sale>> findByQtd(int qtd);
 
+        
+
     }
 }

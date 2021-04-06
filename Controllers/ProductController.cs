@@ -46,6 +46,14 @@ namespace SCEES.Controllers
             return Ok(result);
         }
         [HttpGet]
+        [Route("querySalePrice")]
+        public async Task<ActionResult> GetQuerySAle([FromQuery(Name = "salePrice")] decimal price)
+        {
+            var result = await productServices.findByPriceSale(price);
+            if (result == null) return NotFound(new ErrorResponse { Error = null, Status = false });
+            return Ok(result);
+        }
+        [HttpGet]
         [Route("queryQtd")]
         public async Task<ActionResult> GetQueryQtd([FromQuery(Name = "qtd")] int qtd)
         {

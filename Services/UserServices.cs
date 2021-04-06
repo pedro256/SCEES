@@ -1,9 +1,9 @@
 ﻿using SCEES.Domain.Services;
+using SCEES.Extensions;
 using SCEES.Models;
 using SCEES.Persistence.Repositories;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace SCEES.Services
@@ -18,6 +18,7 @@ namespace SCEES.Services
         }
         public async Task<Usuario> createUser(Usuario usuario)
         {
+            usuario.password = CryptographyExtension.GerarHashMd5(usuario.password);
             return await userRepository.addAsync(usuario);
             
         }
@@ -34,6 +35,7 @@ namespace SCEES.Services
 
         public async Task<Usuario> updateAsync(Usuario usuario)
         {
+            usuario.updatedAt = DateTime.UtcNow;
             return await userRepository.updateAsync(usuario);
         }
         public async Task<bool> deleteAsync(Guid id)

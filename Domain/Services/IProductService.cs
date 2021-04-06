@@ -20,5 +20,6 @@ namespace SCEES.Domain.Services
         public Task<IEnumerable<Product>> findByCategoryId(Guid id);
         public Task<IEnumerable<Product>> findByDateValid(DateTime date);
         ///public Task<IEnumerable<Product>> findQueryAsync(ProductQuery productQuery);
+        public Task<IEnumerable<Product>> findByPriceSale(decimal price);
     }
 }
