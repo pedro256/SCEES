@@ -37,8 +37,10 @@ Implementar a aplicação desde de o núcleo back-end até a interfaces de inter
 ## FUNCIONALIDADES:
 * **BACKEND:**
  * [x] CRUD usuario
- * [ ] CRUD categorias de produtos **INCOMPLETO**
+ * [X] CRUD categorias de produtos 
  * [x] CRUD produtos
- * [ ] CRUD vendas **INCOMPLETO**
+ * [X] CRUD vendas 
+
+**EM MELHORIAS**
 
 * **FRONTEND:**
