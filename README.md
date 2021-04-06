@@ -1,9 +1,10 @@
+
 # SISTEMA DE ESTOQUE ENTRADA E SAIDA DE DADOS
-## O que é?
+##  ❓ O que é?
 um sistema que propõe a organização do estoque de uma loja qualquer.
-## Objetivo?
+##  ✅Objetivo?
 Implementar a aplicação desde de o núcleo back-end até a interfaces de interação com o usuário.
-## Sobre as ferramentas:
+##  🔨 Sobre as ferramentas:
 
  #### **backend**:
  - **C# Asp .net core 5**
@@ -11,11 +12,11 @@ Implementar a aplicação desde de o núcleo back-end até a interfaces de inter
  #### frontend:
  - **Angular Js**
 
-## Requisitos para usar em minha maquina:
+## 📜 Requisitos para usar em minha maquina:
 * deve ter pelo menos Visual Studio Code ou Visual Studio
 * ter o dotnet 5 instalado
 * mysql instalado
-##  Migrations
+##  🔱 Migrations
 **! Para usar o banco de dados usei o conceito de *Code First* e inserir Migrations para facilitar a persistência de dados**
 **para usar as Migrations, entre no nuget console e digite:**
 *(não esqueça de iniciar o servidor mysql)*
@@ -34,13 +35,13 @@ Implementar a aplicação desde de o núcleo back-end até a interfaces de inter
     ...
     dotnet ef database update
     
-## FUNCIONALIDADES:
+## 🧮 FUNCIONALIDADES:
 * **BACKEND:**
  * [x] CRUD usuario
  * [X] CRUD categorias de produtos 
  * [x] CRUD produtos
  * [X] CRUD vendas 
 
-**EM MELHORIAS**
+**🛑 EM MELHORIAS**
 
 * **FRONTEND:**
