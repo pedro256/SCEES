@@ -33,3 +33,12 @@ Implementar a aplicação desde de o núcleo back-end até a interfaces de inter
     dotnet ef migrations add NomeDaMigration
     ...
     dotnet ef database update
+    
+## FUNCIONALIDADES:
+* **BACKEND:**
+ * [x] CRUD usuario
+ * [ ] CRUD categorias de produtos **INCOMPLETO**
+ * [x] CRUD produtos
+ * [ ] CRUD vendas **INCOMPLETO**
+
+* **FRONTEND:**
