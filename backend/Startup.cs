@@ -43,6 +43,8 @@ namespace SCEES
             services.AddScoped<ISaleRepository,SaleRepository>();
 
 
+            services.AddCors();
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -63,6 +65,12 @@ namespace SCEES
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors(x => x
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .SetIsOriginAllowed(origin => true)
+                .AllowCredentials()); 
 
             app.UseAuthorization();
 
