@@ -35,10 +35,12 @@ namespace SCEES
             services.AddScoped<IUserService, UserServices>();
             services.AddScoped<ICategoryService, CategoryService>();
             services.AddScoped<IProductService, ProductService>();
+            services.AddScoped<ISaleService,SaleService>();
             //repositories
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<ISaleRepository,SaleRepository>();
 
 
             services.AddControllers();

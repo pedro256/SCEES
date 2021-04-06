@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SCEES.Domain.Models;
-using SCEES.Domain.Models.Query;
 using SCEES.Domain.Repositories;
 using System;
 using System.Collections.Generic;

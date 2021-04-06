@@ -3,8 +3,6 @@ using SCEES.Domain.Models;
 using SCEES.Domain.Services;
 using SCEES.Resorces.Errors;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace SCEES.Controllers

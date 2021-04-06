@@ -1,12 +1,8 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using SCEES.Domain.Models;
-using SCEES.Domain.Models.Query;
 using SCEES.Domain.Services;
 using SCEES.Resorces.Errors;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace SCEES.Controllers

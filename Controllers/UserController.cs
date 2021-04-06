@@ -4,8 +4,6 @@ using SCEES.Domain.Services;
 using SCEES.Models;
 using SCEES.Resorces.Errors;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace SCEES.Controllers
