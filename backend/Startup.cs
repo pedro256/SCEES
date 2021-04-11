@@ -11,72 +11,60 @@ using SCEES.Persistence;
 using SCEES.Persistence.Repositories;
 using SCEES.Services;
 
-namespace SCEES
-{
-    public class Startup
-    {
-        public Startup(IConfiguration configuration)
-        {
+namespace SCEES {
+    public class Startup {
+        public Startup (IConfiguration configuration) {
             Configuration = configuration;
         }
 
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
-        {
+        public void ConfigureServices (IServiceCollection services) {
             //database
-            string mysqlConnection = Configuration.GetConnectionString("DefaultConnection");
-            services.AddDbContextPool<ContextDbApp>(options =>
-                     options.UseMySql(mysqlConnection,ServerVersion.AutoDetect(mysqlConnection))
+            string mysqlConnection = Configuration.GetConnectionString ("DefaultConnection");
+            services.AddDbContextPool<ContextDbApp> (options =>
+                options.UseMySql (mysqlConnection, ServerVersion.AutoDetect (mysqlConnection))
             );
 
             //services
-            services.AddScoped<IUserService, UserServices>();
-            services.AddScoped<ICategoryService, CategoryService>();
-            services.AddScoped<IProductService, ProductService>();
-            services.AddScoped<ISaleService,SaleService>();
+            services.AddScoped<IUserService, UserServices> ();
+            services.AddScoped<ICategoryService, CategoryService> ();
+            services.AddScoped<IProductService, ProductService> ();
+            services.AddScoped<ISaleService, SaleService> ();
             //repositories
-            services.AddScoped<IUserRepository, UserRepository>();
-            services.AddScoped<ICategoryRepository, CategoryRepository>();
-            services.AddScoped<IProductRepository, ProductRepository>();
-            services.AddScoped<ISaleRepository,SaleRepository>();
+            services.AddScoped<IUserRepository, UserRepository> ();
+            services.AddScoped<ICategoryRepository, CategoryRepository> ();
+            services.AddScoped<IProductRepository, ProductRepository> ();
+            services.AddScoped<ISaleRepository, SaleRepository> ();
 
+            services.AddCors(c => c.AddPolicy("ApiPolicy", builder =>{
+                builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+            }));
 
-            services.AddCors();
-
-            services.AddControllers();
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "SCEES", Version = "v1" });
+            services.AddControllers ();
+            services.AddSwaggerGen (c => {
+                c.SwaggerDoc ("v1", new OpenApiInfo { Title = "SCEES", Version = "v1" });
             });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-        {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "SCEES v1"));
+        public void Configure (IApplicationBuilder app, IWebHostEnvironment env) {
+            if (env.IsDevelopment ()) {
+                app.UseDeveloperExceptionPage ();
+                app.UseSwagger ();
+                app.UseSwaggerUI (c => c.SwaggerEndpoint ("/swagger/v1/swagger.json", "SCEES v1"));
             }
 
-            app.UseHttpsRedirection();
+            app.UseHttpsRedirection ();
 
-            app.UseRouting();
+            app.UseRouting ();
 
-            app.UseCors(x => x
-                .AllowAnyMethod()
-                .AllowAnyHeader()
-                .SetIsOriginAllowed(origin => true)
-                .AllowCredentials()); 
+            // global cors policy
+            app.UseCors("ApiPolicy"); // allow credentials
 
-            app.UseAuthorization();
-
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllers();
+            app.UseEndpoints (endpoints => {
+                endpoints.MapControllers ();
             });
         }
     }
