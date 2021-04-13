@@ -9,7 +9,7 @@ import {Product} from './product.model'
   providedIn: 'root'
 })
 export class ProductService {
-  baseUrl = "https://localhost:5001/api/Product"
+  baseUrl = "http://localhost:4001/products"
   httpOptions = {headers: new HttpHeaders({"Content-Type": "application/json"})};
 
   constructor(private snackBar: MatSnackBar,private http:HttpClient) { }
@@ -24,9 +24,9 @@ export class ProductService {
   create(product : Product ): Observable<any>{
     return this.http.post<Product>(this.baseUrl,product, this.httpOptions);
   }
-  /*
+  
   findAll(): Observable<Product[]>{
     return this.http.get<Product[]>(this.baseUrl);
   }
-  */
+  
 }

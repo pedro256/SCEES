@@ -11,10 +11,10 @@ import { Product } from '../product.model';
 export class ProductCreateComponent implements OnInit {
 
   product : Product = {
-    name:'testeangular',
+    name:'',
     qtd:12,
     categoryId:'08d8fb82-714e-446d-81bb-06f412602aec',
-    price:21
+    price:0
   }
   constructor(private productService:ProductService, private route:Router) { }
 
