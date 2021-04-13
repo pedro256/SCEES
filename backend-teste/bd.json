@@ -1,50 +1,14 @@
 {
   "products": [
     {
-      "id": "uwuwuwiw827n20324292",
+      "id": "20324292",
       "name": "short fino [novan moda 2123]",
       "qtd": 910,
       "categoryId": "08d8f790-9807-4e38-8eae-df24b7ec4a58",
       "price": 10.5,
       "salePrice": 21,
       "dataValid": "2021-04-05"
-    },
-    {
-      "name": "short apenas",
-      "qtd": 910,
-      "categoryId": "08d8f790-9807-4e38-8eae-df24b7ec4a58",
-      "price": 10.5,
-      "salePrice": 21,
-      "dataValid": "2021-04-05",
-      "id": "_c6yGsp"
-    },
-    {
-      "name": "testeangular",
-      "qtd": 12,
-      "categoryId": "08d8fb82-714e-446d-81bb-06f412602aec",
-      "price": 21,
-      "id": "KnckN4F"
-    },
-    {
-      "name": "testeangular",
-      "qtd": 12,
-      "categoryId": "08d8fb82-714e-446d-81bb-06f412602aec",
-      "price": 21,
-      "id": "4PMpHf1"
-    },
-    {
-      "name": "PEDRO HENRIQUE",
-      "qtd": 12,
-      "categoryId": "08d8fb82-714e-446d-81bb-06f412602aec",
-      "price": "10",
-      "id": "V3Q843-"
-    },
-    {
-      "name": "cegim-administrador",
-      "qtd": 12,
-      "categoryId": "08d8fb82-714e-446d-81bb-06f412602aec",
-      "price": "1232",
-      "id": "l-ht2aq"
     }
+    
   ]
 }
