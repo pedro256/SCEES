@@ -2,3 +2,12 @@ form{
     display: flex;
     flex-direction: column;
 }
+i{
+    margin-right: 0.5rem;
+}
+.edit > i{
+    color: wheat;
+}
+.delete > i{
+    color: rgb(255, 0, 0);
+}

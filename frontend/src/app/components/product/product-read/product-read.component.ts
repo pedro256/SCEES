@@ -9,13 +9,16 @@ import { ProductService } from '../product.service';
 })
 export class ProductReadComponent implements OnInit {
 
-  products: Product[]
-  constructor(private productService:ProductService) { }
+  
+  products: Product[] = []
+  displayedColumns = ['id','name','qtd','price','actions']
+
+  constructor(private productService:ProductService) {
+   }
 
   ngOnInit(): void {
     this.productService.findAll().subscribe(productsS=>{
       this.products = productsS
-      console.log(this.products)
     })
   }
 

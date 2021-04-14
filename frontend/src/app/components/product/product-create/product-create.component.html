@@ -7,15 +7,15 @@
             <input matInput placeholder="NOME" [(ngModel)]='product.name' name="name">
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="PREÇO (R$)"  [(ngModel)]='product.price' name="price">
+            <input matInput placeholder="PREÇO (R$)"  type="number" [(ngModel)]='product.price' name="price">
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="QUANTIDADE"  [(ngModel)]='product.qtd' name="qtd">
+            <input matInput placeholder="QUANTIDADE" type="number"  [(ngModel)]='product.qtd' name="qtd">
         </mat-form-field>
 
     </form>
     <button mat-raised-button (click) = "createProduct()">
-        NOVO PRODUTO
+        CADASTRAR
     </button>
     <button mat-raised-button (click) = "cancel()">
         CANCELAR
