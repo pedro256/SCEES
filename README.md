@@ -1,3 +1,8 @@
+# PREVIEW
+
+|principal |criar produto  | mensagem de conclusão |alterar dados | deletar produtos|
+|--|--|--|--|--|
+| <img src = "./sources/01.png" width="300">| <img src = "./sources/02.png" width="300"> | <img src = "./sources/03.png" width="300"> | <img src = "./sources/04.png" width="300">|<img src = "./sources/05.png" width="300">|
 
 # SISTEMA DE ESTOQUE ENTRADA E SAIDA DE DADOS
 ##  ❓ O que é?
