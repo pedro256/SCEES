@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router'
+import { HeaderService } from 'src/app/components/template/header/header.service';
 
 @Component({
   selector: 'app-stock-crud',
@@ -8,7 +9,13 @@ import {Router} from '@angular/router'
 })
 export class StockCrudComponent implements OnInit {
 
-  constructor(private router:Router) { }
+  constructor(private router:Router,private headerService:HeaderService) {
+    headerService.headerData = {
+      title:'ESTOQUE DE PRODUTOS',
+      icon:'inventory_2',
+      routeURL:'/stock'
+    }
+   }
 
   ngOnInit(): void {
   }

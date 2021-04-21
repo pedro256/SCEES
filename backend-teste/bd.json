@@ -1,27 +1,25 @@
 {
   "products": [
     {
-      "id": "20324292",
-      "name": "short fino [novan moda 2123]",
-      "qtd": 910,
-      "categoryId": "08d8f790-9807-4e38-8eae-df24b7ec4a58",
-      "price": 10.5,
-      "salePrice": 21,
-      "dataValid": "2021-04-05"
-    },
-    {
-      "name": "produto qualquer",
+      "name": "teste",
       "qtd": 12,
       "categoryId": "08d8fb82-714e-446d-81bb-06f412602aec",
-      "price": "17262",
-      "id": "mYghq1J"
+      "price": 112,
+      "id": "obmjpt9"
     },
     {
-      "name": "21212",
+      "name": "teste de produto",
       "qtd": 12,
       "categoryId": "08d8fb82-714e-446d-81bb-06f412602aec",
-      "price": 20.21,
-      "id": "VqeluAX"
+      "price": 92.21,
+      "id": "hgHzF_C"
+    },
+    {
+      "name": "teste de produto 918291",
+      "qtd": 12,
+      "categoryId": "08d8fb82-714e-446d-81bb-06f412602aec",
+      "price": 9.21,
+      "id": "Dbp6a9L"
     }
   ]
 }

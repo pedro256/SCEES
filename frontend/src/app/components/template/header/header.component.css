@@ -6,6 +6,7 @@
     display: inline;
     align-items: center;
     text-decoration: none;
+    color: honeydew;
 }
 .header .title-group{
     padding-left: 30px;

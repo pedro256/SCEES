@@ -8,3 +8,11 @@ body { margin: 0; font-family: 'Poppins'; }
 .v-middle{
     vertical-align: middle;
 }
+.msg-success{
+    background-color: greenyellow;
+    color: honeydew;
+}
+.msg-error{
+    background-color: red;
+    color: honeydew;
+}
